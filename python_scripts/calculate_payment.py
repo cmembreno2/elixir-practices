@@ -1,21 +1,22 @@
-employe_first_name = "Carlos"
-employe_last_name = "Membreno"
-prefix_text = "Hello"
+employee = {
+  "full_name": "Carlos Membreno",
+  "basic_salary": 1000,
+  "skills": ["excel", "powerbi", "macros"],
+  "platform_fee_percentage": 0.1
+}
 
-welcome_message = prefix_text + employe_first_name + employe_last_name
+def calculate_fee_amount(a, b):
+  return a * b
 
-print(welcome_message.upper())
+def calculate_payment_after_fee(a, b):
+  return a - calculate_fee_amount(a, b)
 
-employe_basic_salary_cs = 10000
-platform_fee_percentage = 0.1
+employee_full_name = employee["full_name"]
+employee_basic_salary = employee["basic_salary"]
+employee_skills = employee["skills"]
+platform_fee_percentage = employee["platform_fee_percentage"]
 
-def calculate_fee_amount_cs(a,b):
-     return a * b 
+employee_payment = calculate_payment_after_fee(employee_basic_salary, platform_fee_percentage)
 
-def payment_after_fee(a,b):
-    return a - calculate_fee_amount_cs(a, b)
-
-employe_payment =  payment_after_fee(employe_basic_salary_cs,platform_fee_percentage)
-
-print(("Your basic salary is : "+ str(employe_basic_salary_cs)).upper())
-print(("Your payment after fee is : "+ str(employe_payment)).upper())
+message = f"Hello {employee_full_name}\nSkills: {', '.join(employee_skills)}\nYour payment is for USD= {employee_payment}"
+print(message.upper())
