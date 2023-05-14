@@ -20,12 +20,6 @@ defmodule MyAppWeb.Router do
     get "/", PageController, :home
   end
 
-  scope "/", MyAppWeb do
-    pipe_through :browser
-
-    get "/hello", HelloController, :world
-  end
-
   # Other scopes may use custom stacks.
   # scope "/api", MyAppWeb do
   #   pipe_through :api
