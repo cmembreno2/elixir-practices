@@ -1,8 +1,8 @@
 defmodule PasswordGeneratorTest do
   use ExUnit.Case
-  doctest PasswordGenerator
+  doctest HelloWorld
 
   test "greets the world" do
-    assert PasswordGenerator.hello() == :world
+    assert HelloWorld.hello() == :hello_world
   end
 end
