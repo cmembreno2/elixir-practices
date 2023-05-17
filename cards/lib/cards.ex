@@ -4,6 +4,15 @@ defmodule Cards do
   """
   @doc """
   Create a new deck
+
+  ## Examples
+
+    iex>Cards.create_deck
+    ["Ace of Spades", "Two of Spades", "Three of Spades", "Four of Spades",
+    "Ace of Clubs", "Two of Clubs", "Three of Clubs", "Four of Clubs",
+    "Ace of Hearts", "Two of Hearts", "Three of Hearts", "Four of Hearts",
+    "Ace of Diamonds", "Two of Diamonds", "Three of Diamonds", "Four of Diamonds"]
+
   """
   def create_deck do
     values = ["Ace","Two","Three","Four"]
@@ -16,11 +25,6 @@ defmodule Cards do
 
   @doc """
   Shuffle a deck. Need the argument `deck`
-
-  ## Examples
-
-    iex> shuffled_deck = Cards.shuffle(deck)
-
   """
   def shuffle(deck) do
     Enum.shuffle(deck)
